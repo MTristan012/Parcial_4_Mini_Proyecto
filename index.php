@@ -79,9 +79,9 @@
         </li>
       </ul>
       <p>
-        Adready a member?
+        Don't have an account yet?
         <span>
-          <a href="#" class="link-underline link-underline-opacity-0">Login</a>
+          <a href="./views/logIn.php" class="link-underline link-underline-opacity-0">Register</a>
         </span>
       </p>
 
