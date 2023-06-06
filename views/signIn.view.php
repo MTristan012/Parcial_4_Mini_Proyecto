@@ -81,7 +81,7 @@
       <p>
         Don't have an account yet?
         <span>
-          <a href="./logIn.view.php" class="link-underline link-underline-opacity-0">Register</a>
+          <a href="../sources/logIn.php" class="link-underline link-underline-opacity-0">Register</a>
         </span>
       </p>
 

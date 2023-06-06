@@ -1,8 +1,8 @@
 <?php
   session_start();
   if (isset($_SESSION['email'])){
-    header('Location:main.php');
+    header('Location:./sources/main.php');
   } else {
-    header('Location:signIn.php');
+    header('Location:./sources/signIn.php');
   }
 ?>

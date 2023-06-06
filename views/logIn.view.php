@@ -79,7 +79,7 @@
       <p>
         Adready a member?
         <span>
-          <a href="./signIn.view.php" class="link-underline link-underline-opacity-0">Register</a>
+          <a href="../sources/signIn.php" class="link-underline link-underline-opacity-0">Register</a>
         </span>
       </p>
 
