@@ -27,11 +27,6 @@
         <p>Changes will be reflected to every services</p>
 
         <form action="" method="post">
-            <div class="input-group mb-3">
-                Select image to upload:
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <input type="submit" value="Upload Image" name="submit">
-            </div>
 
             <div class="mb-3">
                 <p class="mb-0">Name</p>
@@ -40,7 +35,7 @@
 
             <div class="mb-3">
                 <p class="mb-0">Bio</p>
-                <input type="text" class="form-control py-5 text-start text-break" placeholder="Enter your bio..." name="registerBio">
+                <input type="textarea" class="form-control py-5 text-start text-break" placeholder="Enter your bio..." name="registerBio">
             </div>
 
             <div class="mb-3">
