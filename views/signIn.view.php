@@ -85,7 +85,7 @@
         </li>
       </ul>
       <p>
-        Don't have an account yet?
+        Already a Member?
         <span>
           <a href="../sources/logIn.php" class="link-underline link-underline-opacity-0">Log In</a>
         </span>

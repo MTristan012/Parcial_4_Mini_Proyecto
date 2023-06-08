@@ -6,8 +6,8 @@ if (!empty($_POST['btnLogIn'])){
         $password = $_POST['passwordLogIn'];
         $sql=$conn->query(" SELECT * FROM users where email='$email' and password='$password' ");
         if ($data=$sql->fetch_object()) {
-            $_SESSION["id"]=$datos->id;
-            $_SESSION["name"]=$datos->name;
+            $_SESSION["id"]=$data->id;
+            $_SESSION["name"]=$data->name;
             header("Location:../sources/main.php");
         } else {
             echo "<div class='alert alert-danger text-center mb-0'>No User Found</div>";
