@@ -14,11 +14,11 @@
 </head>
 
 <body>
-  <header>
+  <header class="ms-0 ps-0 pt-0 pe-5">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid align-items-center">
         <img src="../assets/devchallenges.svg" />
-        <ul class="nav-item dropdown">
+        <ul class="nav-item dropdown pe-2">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
             <?php
               echo $_SESSION['name'];
@@ -35,7 +35,86 @@
     </nav>
   </header>
   <main>
-    <h1 class="text-center">Personal Info</h1>
-    <p class="text-center">Basic info, like you name and photo</p>
+    <section>
+      <div>
+        <h1 class="text-center">Personal Info</h1>
+        <p class="text-center">Basic info, like you name and photo</p>
+      </div>
+    </section>
+    
+
+    <section class="container mt-5">
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between">
+            <div>
+              <h4>Profile</h4>
+              <p>Some info may be visible to other people</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <button type="button" class="btn btn-outline-secondary me-2">Edit</button>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <span>PHOTO</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="text-body-secondary  ms-3">
+              NAME
+            </span>
+            <span>
+              <?php
+                echo $_SESSION['name'];
+              ?>
+            </span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="text-body-secondary  ms-3">
+              BIO
+            </span>
+            <span>
+              <?php
+                echo $_SESSION['bio'];
+              ?>
+            </span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="text-body-secondary  ms-3">
+              PHONE
+            </span>
+            <span>
+              <?php
+                echo $_SESSION['phone'];
+              ?>
+            </span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="text-body-secondary  ms-3">
+              EMAIL
+            </span>
+            <span>
+              <?php
+                echo $_SESSION['email'];
+              ?>
+            </span>
+          </li>
+        </ul>
+        <div class="card-footer d-flex justify-content-between">
+          <span class="text-body-secondary ms-3">
+            PASSWORD
+          </span>
+          <span>
+              <?php
+                $safePassword = strlen($_SESSION['password']);
+                echo str_repeat("*", $safePassword);
+              ?>
+            </span>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <p>Created by <span><a href="https://github.com/MTristan012">MTristan012</a></span></p>
+        <p>devChallenges</p>
+      </div>
+    </section>
   </main>
 <body>
