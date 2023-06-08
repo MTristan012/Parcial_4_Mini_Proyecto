@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    /*session_start();
     if (isset($_SESSION['email'])){
         header('Location:main.php');
     }
@@ -29,6 +29,7 @@
                 header('Location:main.php');
             }
         }
-    }
+    }*/
+
     require '../views/signIn.view.php'
 ?>
