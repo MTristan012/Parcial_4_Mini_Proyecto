@@ -30,7 +30,6 @@
             include "../controller/controllerRegister.php"; 
         ?>
 
-
         <form action="" method="post">
 
             <div class="mb-3">
@@ -50,18 +49,12 @@
 
             <div class="mb-3">
                 <p class="mb-0">Email</p>
-                <input type="email" class="form-control py-2" placeholder="Enter your email" name="registerEmail" value="<?php
-                    $email = $_POST['emailSignIn'];
-                    echo "$email";
-                ?>">
+                <input type="email" class="form-control py-2" placeholder="Enter your email" name="registerEmail">
             </div>
 
             <div class="mb-3">
                 <p class="mb-0">Password</p>
-                <input type="password" class="form-control py-2" placeholder="Enter your password..." name="registerPassword" value="<?php
-                    $password = $_POST['passwordSignIn'];
-                    echo "$password";
-                ?>">
+                <input type="password" class="form-control py-2" placeholder="Enter your password..." name="registerPassword">
             </div>
 
             <input class="btn btn-primary mt-3" type="submit" name="btnRegister" value="Save"/>

@@ -1,7 +1,6 @@
 <?php
-
 if (!empty($_POST['btnRegister'])){
-    if (empty($_POST['registerName']) and empty($_POST['registerBio']) and empty($_POST['registerPhone']) and empty($_POST['registerEmail']) and empty($_POST['registerPassword'])){
+    if (!empty($_POST['registerName']) and !empty($_POST['registerBio']) and !empty($_POST['registerPhone']) and !empty($_POST['registerEmail']) and !empty($_POST['registerPassword'])){
         $name = $_POST['registerName'];
         $bio = $_POST['registerBio'];
         $phone = $_POST['registerPhone'];
@@ -10,7 +9,7 @@ if (!empty($_POST['btnRegister'])){
         
         $sql = "INSERT INTO users (name, bio, phone, email, password) VALUES ('$name', '$bio', '$phone', '$email', '$password')";
         if (mysqli_query($conn, $sql)) {
-            echo "Registro insertado correctamente.";
+            header("Location:../sources/logIn.php");
         } else {
             echo "Error al insertar el registro: " . mysqli_error($conn);
         }

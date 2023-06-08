@@ -31,7 +31,7 @@
     </div>
 
     <div class="card-body">
-      <form action="../sources/register.php" method="post">
+      <form action="" method="post">
         <div class="input-group mb-3">
           <span class="input-group-text border-end-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill"
