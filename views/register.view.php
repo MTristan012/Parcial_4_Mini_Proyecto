@@ -25,6 +25,11 @@
 
         <h2>Register your Info</h2>
         <p>Changes will be reflected to every services</p>
+        <?php 
+            include "../model/conexion.php";
+            include "../controller/controllerRegister.php"; 
+        ?>
+
 
         <form action="" method="post">
 
