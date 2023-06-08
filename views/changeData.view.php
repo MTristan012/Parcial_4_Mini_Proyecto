@@ -10,7 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
-  <title>Main</title>
+  <title>Change Data</title>
 </head>
 
 <body>
@@ -50,85 +50,52 @@
     </nav>
   </header>
   <main>
-    <section>
-      <div>
-        <h1 class="text-center">Personal Info</h1>
-        <p class="text-center">Basic info, like you name and photo</p>
-      </div>
+    <section class="container">
+      <a class="btn btn-outline-info mt-3 border-0" type="submit" name="btnBackChangeData" href="../sources/main.php">
+        &lt; Back
+      </a>
     </section>
     
 
-    <section class="container mt-5">
-      <div class="card">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex justify-content-between">
-            <div>
-              <h4>Profile</h4>
-              <p>Some info may be visible to other people</p>
+    <section class="container mt-5 card py-4">
+      <h2 class="ms-3">Change Info</h2>
+      <p class="ms-3">Changes will be reflected to every services</p>
+      <?php 
+          include "../model/conexion.php";
+          include "../controller/controllerChangeData.php"; 
+      ?>
+
+      <div class="container pe-5">
+        <form action="" method="post" class="pe-5">
+
+            <div class="mb-3">
+                <p class="mb-0">Name</p>
+                <input type="name" class="form-control py-2" placeholder="Enter your name..." name="changeDataName">
             </div>
-            <div class="d-flex align-items-center">
-              <a type="button" class="btn btn-outline-secondary me-2" href="../sources/changeData.php">Edit</a>
+
+            <div class="mb-3">
+                <p class="mb-0">Bio</p>
+                <input type="textarea" class="form-control py-5 text-start text-break" placeholder="Enter your bio..." name="changeDataBio">
             </div>
-          </li>
-          <li class="list-group-item">
-            <span>PHOTO</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span class="text-body-secondary  ms-3">
-              NAME
-            </span>
-            <span>
-              <?php
-                echo $_SESSION['name'];
-              ?>
-            </span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span class="text-body-secondary  ms-3">
-              BIO
-            </span>
-            <span>
-              <?php
-                echo $_SESSION['bio'];
-              ?>
-            </span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span class="text-body-secondary  ms-3">
-              PHONE
-            </span>
-            <span>
-              <?php
-                echo $_SESSION['phone'];
-              ?>
-            </span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span class="text-body-secondary  ms-3">
-              EMAIL
-            </span>
-            <span>
-              <?php
-                echo $_SESSION['email'];
-              ?>
-            </span>
-          </li>
-        </ul>
-        <div class="card-footer d-flex justify-content-between">
-          <span class="text-body-secondary ms-3">
-            PASSWORD
-          </span>
-          <span>
-              <?php
-                $safePassword = strlen($_SESSION['password']);
-                echo str_repeat("*", $safePassword);
-              ?>
-            </span>
-        </div>
-      </div>
-      <div class="d-flex justify-content-between">
-        <p>Created by <span><a href="https://github.com/MTristan012">MTristan012</a></span></p>
-        <p>devChallenges</p>
+
+            <div class="mb-3">
+                <p class="mb-0">Phone</p>
+                <input type="phone" class="form-control py-2" placeholder="Enter your phone..." name="changeDataPhone">
+            </div>
+
+            <div class="mb-3">
+                <p class="mb-0">Email</p>
+                <input type="email" class="form-control py-2" placeholder="Enter your email" name="changeDataEmail">
+            </div>
+
+            <div class="mb-3">
+                <p class="mb-0">Password</p>
+                <input type="password" class="form-control py-2" placeholder="Enter your password..." name="changeDataPassword">
+            </div>
+
+            <input class="btn btn-primary mt-3" type="submit" name="btnChangeDataSave" value="Save"/>
+
+        </form>
       </div>
     </section>
   </main>

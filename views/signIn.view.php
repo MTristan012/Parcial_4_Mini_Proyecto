@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -17,7 +17,7 @@
 
   <div class="card container position-absolute top-50 start-50 translate-middle rounded-4" style="max-width: 22rem;">
     <div class="mt-3 ms-3">
-      <img src="../assets/devchallenges.svg" alt="devchallenges" style="width: 9rem;">
+      <img src="../assets/devchallenges-light.svg" alt="devchallenges" style="width: 9rem;">
     </div>
 
     <div class="card-body">

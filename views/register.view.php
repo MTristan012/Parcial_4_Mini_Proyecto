@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -17,7 +17,7 @@
     <header>
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid align-items-center">
-            <img src="../assets/devchallenges.svg" />
+            <img src="../assets/devchallenges-light.svg" />
             </div>
         </nav>
     </header>
