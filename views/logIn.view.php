@@ -52,7 +52,7 @@
           <input type="password" class="form-control" aria-label="" placeholder="Password" name="passwordLogIn">
         </div>
 
-        <input class="btn btn-primary" type="submit" name="btnLogIn" value="Start coding now"/>
+        <input class="btn btn-primary" type="submit" name="btnLogIn" value="Login"/>
       </form>
     </div>
 
