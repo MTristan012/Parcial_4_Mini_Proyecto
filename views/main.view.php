@@ -1,11 +1,3 @@
-<?php
-
-if (empty($_SESSION["id"])){
-        header("../sources/logIn.php");
-    }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,24 +14,26 @@ if (empty($_SESSION["id"])){
 </head>
 
 <body>
-  <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid align-items-center">
-      <img src="../assets/devchallenges.svg" />
-      <ul class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-          <?php
-            echo $_SESSION['name'];
-          ?>
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">My Profile</a></li>
-          <li><a class="dropdown-item" href="#">Group Chat</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="../controller/controllerLogOut.php">Logout</a></li>
+  <header>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid align-items-center">
+        <img src="../assets/devchallenges.svg" />
+        <ul class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <?php
+              echo $_SESSION['name'];
+            ?>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">My Profile</a></li>
+            <li><a class="dropdown-item" href="#">Group Chat</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../controller/controllerLogOut.php">Logout</a></li>
+          </ul>
         </ul>
-      </ul>
-    </div>
-  </nav>
+      </div>
+    </nav>
+  </header>
   <main>
     <h1 class="text-center">Personal Info</h1>
     <p class="text-center">Basic info, like you name and photo</p>

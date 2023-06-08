@@ -8,7 +8,7 @@ if (!empty($_POST['btnSignIn'])){
         if ($data=$sql->fetch_object()) {
             echo "<div class='alert alert-danger text-center mb-0'>Email is Already Registered</div>";
         } else {
-            header("Location:../sources/main.php");
+            header("Location:../sources/register.php");
         }
         
     } else{
