@@ -83,7 +83,7 @@
         </li>
       </ul>
       <p>
-        Adready a member?
+        Don't have an account yet?
         <span>
           <a href="../sources/signIn.php" class="link-underline link-underline-opacity-0">Register</a>
         </span>
