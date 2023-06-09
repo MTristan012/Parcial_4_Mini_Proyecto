@@ -21,7 +21,11 @@
         <ul class="nav-item dropdown pe-2">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
             <?php
-              echo '<img src = "data:image/png;base64,' . base64_encode($_SESSION['img']) . '" width = "20em" height = "20em" class="rounded"/>' . " " . $_SESSION['name'];
+              if ($_SESSION['img'] == NULL) {
+                echo '<img src="../assets/logIn.jpg" alt="NoPhoto" width = "25em" height = "25em" class="rounded">' . " " . $_SESSION['name'];
+              } else {
+                echo '<img src="' . $_SESSION['img'] . '" width = "25em" height = "25em" class="rounded" alt="UserPhoto"/>' . " " . $_SESSION['name'];
+              }
             ?>
           </a>
           <ul class="dropdown-menu">
@@ -71,7 +75,11 @@
           <div class="mb-3 d-flex">
             <span class="me-4 d-flex align-items-center mb-0">
               <?php
-                echo '<img src = "data:image/png;base64,' . base64_encode($_SESSION['img']) . '" width = "60em" height = "60em" class="rounded"/>';
+                if ($_SESSION['img'] == NULL) {
+                  echo '<img src="../assets/logIn.jpg" alt="NoPhoto" width = "70em" height = "70em" class="rounded">';
+                } else {
+                  echo '<img src="' . $_SESSION['img'] . '" width = "70em" height = "70em" class="rounded" alt="UserPhoto"/>';
+                }
               ?>
             </span>
             <span>

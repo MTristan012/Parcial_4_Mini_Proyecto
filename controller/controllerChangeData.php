@@ -17,6 +17,7 @@ if (!empty($_POST['btnChangeDataSave'])) {
             $targetFilePath = $targetDirectory . $imgName;
 
             if (move_uploaded_file($img, $targetFilePath)) {
+                
                 $sql = "UPDATE users SET name = '$name', bio = '$bio', phone = '$phone', email = '$email', password = '$password', img = '$targetFilePath' WHERE id = {$_SESSION['id']}";
                 if (mysqli_query($conn, $sql)) {
                     header("Location: ../sources/main.php");
@@ -32,5 +33,4 @@ if (!empty($_POST['btnChangeDataSave'])) {
         echo "<div class='alert alert-danger text-center mb-3'>Fill the Form</div>";
     }
 }
-
 ?>
