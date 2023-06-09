@@ -66,7 +66,7 @@
       ?>
 
       <div class="container pe-5">
-        <form action="" method="post" class="pe-5" >
+        <form action="" method="post" class="pe-5" enctype="multipart/form-data">
 
           <div class="mb-3 d-flex">
             <span class="me-4 d-flex align-items-center mb-0">
