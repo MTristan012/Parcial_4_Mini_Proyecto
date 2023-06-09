@@ -12,6 +12,7 @@ if (!empty($_POST['btnLogIn'])){
             $_SESSION["phone"]=$data->phone;
             $_SESSION["email"]=$data->email;
             $_SESSION["password"]=$data->password;
+            $_SESSION["img"]=$data->img;
             header("Location:../sources/main.php");
         } else {
             echo "<div class='alert alert-danger text-center mb-0'>No User Found</div>";

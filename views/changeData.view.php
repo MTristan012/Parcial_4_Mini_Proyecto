@@ -21,7 +21,7 @@
         <ul class="nav-item dropdown pe-2">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
             <?php
-              echo $_SESSION['name'];
+              echo '<img src = "data:image/png;base64,' . base64_encode($_SESSION['img']) . '" width = "20em" height = "20em" class="rounded"/>' . " " . $_SESSION['name'];
             ?>
           </a>
           <ul class="dropdown-menu">
@@ -66,34 +66,46 @@
       ?>
 
       <div class="container pe-5">
-        <form action="" method="post" class="pe-5">
+        <form action="" method="post" class="pe-5" >
 
-            <div class="mb-3">
-                <p class="mb-0">Name</p>
-                <input type="name" class="form-control py-2" placeholder="Enter your name..." name="changeDataName">
-            </div>
+          <div class="mb-3 d-flex">
+            <span class="me-4 d-flex align-items-center mb-0">
+              <?php
+                echo '<img src = "data:image/png;base64,' . base64_encode($_SESSION['img']) . '" width = "60em" height = "60em" class="rounded"/>';
+              ?>
+            </span>
+            <span>
+              <label for="formFile" class="form-label">CHANGE PHOTO</label>
+              <input class="form-control" type="file" name="changeImg" accept="image/png">
+            </span>
+          </div>
 
-            <div class="mb-3">
-                <p class="mb-0">Bio</p>
-                <input type="textarea" class="form-control py-5 text-start text-break" placeholder="Enter your bio..." name="changeDataBio">
-            </div>
+          <div class="mb-3">
+              <p class="mb-0">Name</p>
+              <input type="name" class="form-control py-2" placeholder="Enter your name..." name="changeDataName">
+          </div>
 
-            <div class="mb-3">
-                <p class="mb-0">Phone</p>
-                <input type="phone" class="form-control py-2" placeholder="Enter your phone..." name="changeDataPhone">
-            </div>
+          <div class="mb-3">
+              <p class="mb-0">Bio</p>
+              <input type="textarea" class="form-control py-5 text-start text-break" placeholder="Enter your bio..." name="changeDataBio">
+          </div>
 
-            <div class="mb-3">
-                <p class="mb-0">Email</p>
-                <input type="email" class="form-control py-2" placeholder="Enter your email" name="changeDataEmail">
-            </div>
+          <div class="mb-3">
+              <p class="mb-0">Phone</p>
+              <input type="phone" class="form-control py-2" placeholder="Enter your phone..." name="changeDataPhone">
+          </div>
 
-            <div class="mb-3">
-                <p class="mb-0">Password</p>
-                <input type="password" class="form-control py-2" placeholder="Enter your password..." name="changeDataPassword">
-            </div>
+          <div class="mb-3">
+              <p class="mb-0">Email</p>
+              <input type="email" class="form-control py-2" placeholder="Enter your email" name="changeDataEmail">
+          </div>
 
-            <input class="btn btn-primary mt-3" type="submit" name="btnChangeDataSave" value="Save"/>
+          <div class="mb-3">
+              <p class="mb-0">Password</p>
+              <input type="password" class="form-control py-2" placeholder="Enter your password..." name="changeDataPassword">
+          </div>
+
+          <input class="btn btn-primary mt-3" type="submit" name="btnChangeDataSave" value="Save"/>
 
         </form>
       </div>

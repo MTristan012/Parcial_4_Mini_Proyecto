@@ -21,8 +21,9 @@
         <ul class="nav-item dropdown pe-2">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
             <?php
-              echo $_SESSION['name'];
+              echo '<img src = "data:image/png;base64,' . base64_encode($_SESSION['img']) . '" width = "20em" height = "20em" class="rounded"/>' . " " . $_SESSION['name'];
             ?>
+            <img src="" alt="" style=>
           </a>
           <ul class="dropdown-menu">
             <li class="d-flex align-items-center container">
@@ -70,8 +71,13 @@
               <a type="button" class="btn btn-outline-secondary me-2" href="../sources/changeData.php">Edit</a>
             </div>
           </li>
-          <li class="list-group-item">
-            <span>PHOTO</span>
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="text-body-secondary ms-3 text-center d-flex align-items-center">PHOTO</span>
+            <span>
+              <?php
+                echo '<img src = "data:image/png;base64,' . base64_encode($_SESSION['img']) . '" width = "60em" height = "60em" class="rounded"/>';
+              ?>
+            </span>
           </li>
           <li class="list-group-item d-flex justify-content-between">
             <span class="text-body-secondary  ms-3">
@@ -84,7 +90,7 @@
             </span>
           </li>
           <li class="list-group-item d-flex justify-content-between">
-            <span class="text-body-secondary  ms-3">
+            <span class="text-body-secondary ms-3">
               BIO
             </span>
             <span>
@@ -94,7 +100,7 @@
             </span>
           </li>
           <li class="list-group-item d-flex justify-content-between">
-            <span class="text-body-secondary  ms-3">
+            <span class="text-body-secondary ms-3">
               PHONE
             </span>
             <span>
@@ -104,7 +110,7 @@
             </span>
           </li>
           <li class="list-group-item d-flex justify-content-between">
-            <span class="text-body-secondary  ms-3">
+            <span class="text-body-secondary ms-3">
               EMAIL
             </span>
             <span>
