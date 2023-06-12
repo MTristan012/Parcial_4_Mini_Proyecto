@@ -1,6 +1,8 @@
 <?php
-if (!empty($_SESSION["id"])){
-        header("../sources/logIn.php");
+    if (empty($_SESSION["id"])){
+        
+    }else{
+        header("Location:../sources/main.php");
     }
     require '../views/logIn.view.php'
 ?>

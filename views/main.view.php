@@ -15,7 +15,7 @@
 
 <body>
   <header class="ms-0 ps-0 pt-0 pe-5">
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar">
       <div class="container-fluid align-items-center">
         <img src="../assets/devchallenges-light.svg" />
         <ul class="nav-item dropdown pe-2">

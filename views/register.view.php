@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <nav class="navbar bg-body-tertiary">
+        <nav class="navbar">
             <div class="container-fluid align-items-center">
             <img src="../assets/devchallenges-light.svg" />
             </div>
@@ -23,42 +23,51 @@
     </header>
     <main class="container mt-5">
 
-        <h2>Register your Info</h2>
-        <p>Changes will be reflected to every services</p>
-        <?php 
-            include "../model/conexion.php";
-            include "../controller/controllerRegister.php"; 
-        ?>
+        <section class="container ps-0">
+            <a class="btn btn-outline-info mt-3 border-0" type="submit" name="btnBackChangeData" href="../sources/signin.php">
+                &lt; Back
+            </a>
+        </section>
 
-        <form action="" method="post">
+        <section class="mt-3">
+           <h2>Register your Info</h2>
+            <p>Changes will be reflected to every services</p>
+            <?php 
+                include "../model/conexion.php";
+                include "../controller/controllerRegister.php"; 
+            ?>
 
-            <div class="mb-3">
-                <p class="mb-0">Name</p>
-                <input type="name" class="form-control py-2" placeholder="Enter your name..." name="registerName">
-            </div>
+            <form action="" method="post">
 
-            <div class="mb-3">
-                <p class="mb-0">Bio</p>
-                <input type="textarea" class="form-control py-5 text-start text-break" placeholder="Enter your bio..." name="registerBio">
-            </div>
+                <div class="mb-3">
+                    <p class="mb-0">Name</p>
+                    <input type="name" class="form-control py-2" placeholder="Enter your name..." name="registerName">
+                </div>
 
-            <div class="mb-3">
-                <p class="mb-0">Phone</p>
-                <input type="phone" class="form-control py-2" placeholder="Enter your phone..." name="registerPhone">
-            </div>
+                <div class="mb-3">
+                    <p class="mb-0">Bio</p>
+                    <input type="textarea" class="form-control py-5 text-start text-break" placeholder="Enter your bio..." name="registerBio">
+                </div>
 
-            <div class="mb-3">
-                <p class="mb-0">Email</p>
-                <input type="email" class="form-control py-2" placeholder="Enter your email" name="registerEmail">
-            </div>
+                <div class="mb-3">
+                    <p class="mb-0">Phone</p>
+                    <input type="phone" class="form-control py-2" placeholder="Enter your phone..." name="registerPhone">
+                </div>
 
-            <div class="mb-3">
-                <p class="mb-0">Password</p>
-                <input type="password" class="form-control py-2" placeholder="Enter your password..." name="registerPassword">
-            </div>
+                <div class="mb-3">
+                    <p class="mb-0">Email</p>
+                    <input type="email" class="form-control py-2" placeholder="Enter your email" name="registerEmail">
+                </div>
 
-            <input class="btn btn-primary mt-3" type="submit" name="btnRegister" value="Save"/>
+                <div class="mb-3">
+                    <p class="mb-0">Password</p>
+                    <input type="password" class="form-control py-2" placeholder="Enter your password..." name="registerPassword">
+                </div>
 
-        </form>
+                <input class="btn btn-primary mt-3" type="submit" name="btnRegister" value="Save"/>
+
+            </form> 
+        </section>
+
     </main>
 </body>
